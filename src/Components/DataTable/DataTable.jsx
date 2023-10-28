@@ -7,6 +7,9 @@ import { Link } from "react-router-dom";
 import { useState , useEffect } from 'react'
 import axios from 'axios'
 const DataTable = () => {
+
+
+ 
   // Actions
 
   const [users, setUsers] = useState([])
@@ -24,9 +27,23 @@ useEffect(()=>{
     fetchUsers()
 
   },[])
-  console.log(users[5])
-  console.log(users)
+  // console.log(users[5])
+  // console.log(users)
+    
 
+  const handleDelete = async (id)=>{
+    try {
+      await axios.delete("http://localhost:8081/users/" + id)
+      // window.location.reload() it is a good practice 
+          //   is ki jagah hum state use kar sakte hen 
+
+      console.log(id)
+
+    } catch (error) {
+      console.log(error)
+    }
+
+  }
 
 
   const actionColumn = [
@@ -34,13 +51,16 @@ useEffect(()=>{
       field: "action",
       headerName: "Action",
       width: 200,
-      renderCell: () => {
+      renderCell: (params) => {
+
+        const data = params.row    // for accessing the data from api 
+        //  jab ye nahi lagaya to deletion perform nai hoi thi
         return (
           <div className="cellAction">
             <Link to="/user/abc" style={{ textDecoration: "none" }}>
               <button className="viewButton">View</button>
             </Link>
-            <button className="deleteButton">Delete</button>
+            <button className="deleteButton" onClick={() => handleDelete(data.id)}>Delete</button>
           </div>
         );
       },
