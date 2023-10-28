@@ -38,7 +38,7 @@ useEffect(()=>{
           //   is ki jagah hum state use kar sakte hen 
           const updateUsers = users.filter(user=>user.id !==id)
           setUsers(updateUsers)
-      console.log(id)
+      // console.log(id)
 
     } catch (error) {
       console.log(error)
@@ -58,7 +58,7 @@ useEffect(()=>{
         //  jab ye nahi lagaya to deletion perform nai hoi thi
         return (
           <div className="cellAction">
-            <Link to="/user/abc" style={{ textDecoration: "none" }}>
+            <Link to={`${data.id}`} style={{ textDecoration: "none" }}>
               <button className="viewButton">View</button>
             </Link>
             <button className="deleteButton" onClick={() => handleDelete(data.id)}>Delete</button>
