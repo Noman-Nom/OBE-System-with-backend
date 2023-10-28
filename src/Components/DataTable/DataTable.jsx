@@ -16,7 +16,7 @@ const DataTable = () => {
 useEffect(()=>{
     const fetchUsers = async ()=>{
         try {
-            const res = await axios.get("http://localhost:8081/users")
+            const res = await axios.get("http://localhost:8088/users")
             console.log(res)
            setUsers(res.data)
 
@@ -33,8 +33,8 @@ useEffect(()=>{
 
   const handleDelete = async (id)=>{
     try {
-      await axios.delete("http://localhost:8081/users/" + id)
-      // window.location.reload() it is a good practice 
+      await axios.delete("http://localhost:8088/users/" + id)
+      // window.location.reload() //it is a good practice 
           //   is ki jagah hum state use kar sakte hen 
           const updateUsers = users.filter(user=>user.id !==id)
           setUsers(updateUsers)

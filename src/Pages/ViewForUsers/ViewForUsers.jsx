@@ -9,8 +9,8 @@ const ViewForUsers = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await axios.get(`http://localhost:8081/users/`);
-        // console.log(res)
+        const res = await axios.get(`http://localhost:8088/users/`);
+        console.log(res.data)
 
         // const foundUser = res.data.find(user => user.id === userId);
 
