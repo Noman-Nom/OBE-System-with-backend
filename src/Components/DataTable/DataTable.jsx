@@ -36,7 +36,8 @@ useEffect(()=>{
       await axios.delete("http://localhost:8081/users/" + id)
       // window.location.reload() it is a good practice 
           //   is ki jagah hum state use kar sakte hen 
-
+          const updateUsers = users.filter(user=>user.id !==id)
+          setUsers(updateUsers)
       console.log(id)
 
     } catch (error) {
