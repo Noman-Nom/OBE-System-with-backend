@@ -103,7 +103,7 @@ export const userColumsForCourse = [
 //     },
 ]
 export const userColumsForStudents = [
-    { field: 'id', headerName: 'Roll-No', width: 100 },
+    { field: 'id', headerName: 'Roll-No', width: 130 },
 
     {
         field: "name",
