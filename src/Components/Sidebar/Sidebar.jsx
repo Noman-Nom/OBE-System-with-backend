@@ -10,6 +10,8 @@ import TextFieldsIcon from "@mui/icons-material/TextFields";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import LockIcon from "@mui/icons-material/Lock";
 
+import {GiTeacher} from 'react-icons/gi'
+
 import { Link } from "react-router-dom";
 import { DarkModeContext } from "../../Context/darkModeContext";
 
@@ -49,6 +51,12 @@ const Sidebar = () => {
             <li>
               <ManIcon className="icon" />
               <span>Students</span>
+            </li>
+          </Link>
+          <Link to="/faculty" style={{ textDecoration: "none" }}>
+            <li>
+              <GiTeacher className="icon" />
+              <span>Faculty</span>
             </li>
           </Link>
           <p className="title">List</p>
