@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import List from "./Pages/List/List";
+
 import New from "./Pages/New/New";
 import Single from "./Pages/Single/Single";
 import { userInputs } from "./formSource";
@@ -11,6 +12,7 @@ import "./App.css";
 import "./Style/Dark.scss";
 import { DarkModeContext } from "./Context/darkModeContext";
 import ViewForUsers from "./Pages/ViewForUsers/ViewForUsers";
+import ListCourses from "./Pages/ListCourses/ListCourses";
 
 const App = () => {
   const { darkMode } = useContext(DarkModeContext);
@@ -32,7 +34,7 @@ const App = () => {
               <Route path=":userId" element={<ViewForUsers />} />
             </Route>
             <Route path="courses">
-              <Route index element={<List />} />
+              <Route index element={<ListCourses />} />
               <Route path="new" element={<New />} />
               <Route path=":courseId" element={<Single />} />
             </Route>
