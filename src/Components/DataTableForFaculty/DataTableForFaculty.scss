@@ -49,19 +49,32 @@
         }
        }
     
-       .cellWithStatus {
+       .cellWithFaculty {
         padding: 5px;
         border-radius: 10px;
         padding: 5px 9px;
         font-weight: 500;
         
-        &.Active{
+        &.lecturer{
             color: rgb(19, 222, 107);
             background-color: rgba(31, 206, 107, 0.158);
         }
-        &.inActive{
+        &.Assistant-Professor{
             color: rgb(73, 190, 255);
             background-color: rgba(35, 165, 245, 0.158);
+        }
+        &.professor{
+            background-color: rgba(100, 112, 50, 0.559);
+            color: rgb(235, 247, 63);
+        }
+      
+        &.DR{
+            background-color: rgba(114, 36, 19, 0.237);
+            color: rgb(236, 70, 14);
+        }
+        &.HOD{
+            background-color: rgba(54, 6, 109, 0.237);
+            color: rgb(87, 168, 201);
         }
       
     
