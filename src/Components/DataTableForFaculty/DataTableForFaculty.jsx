@@ -1,24 +1,25 @@
 import React from "react";
-import "./DataTableForStudents.scss";
+import "./DataTableForFaculty.scss";
 
 import { DataGrid } from "@mui/x-data-grid";
-import { userColumsForStudents, } from "../../DataTableSource";
+
 import { Link } from "react-router-dom";
 import { useState , useEffect } from 'react'
 import axios from 'axios'
-const DataTableForStudents = () => {
+import { ColumsForFaculty } from "../../DataTableSource";
+const DataTableForFaculty = () => {
 
 
  
   // Actions
 
- const [students, setStudents] = useState([])
+  const [faculty, setFaculty] = useState([])
 useEffect(()=>{
     const fetchUsers = async ()=>{
         try {
-            const res = await axios.get("http://localhost:8088/students")
+            const res = await axios.get("http://localhost:8088/faculty")
             console.log(res.data)
-            setStudents(res.data)
+           setFaculty(res.data)
 
         } catch (error) {
             console.log(error)
@@ -79,7 +80,7 @@ useEffect(()=>{
     <div className="dataTable" style={{ height: "640px", width: "100%" }}>
 
       <div className="addNewButton">
-      <p>Add New Students </p>
+      <p>Add Faculty </p>
       <Link to='/user/new' style={{textDecoration:'none'}} className="btn">
      <button>Add New</button>
       </Link>
@@ -87,8 +88,8 @@ useEffect(()=>{
     
       <DataGrid 
         className="dataGrid"
-        rows={students}
-        columns={userColumsForStudents.concat(actionColumn)}
+        rows={faculty}
+        columns={ColumsForFaculty.concat(actionColumn)}
         initialState={{
           pagination: {
             paginationModel: { page: 0, pageSize: 10 },
@@ -102,4 +103,4 @@ useEffect(()=>{
   );
 };
 
-export default DataTableForStudents;
+export default DataTableForFaculty;

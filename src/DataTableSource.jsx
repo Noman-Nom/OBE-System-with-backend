@@ -157,6 +157,61 @@ export const userColumsForStudents = [
 //         }
 //     },
 ]
+export const ColumsForFaculty= [
+    { field: 'id', headerName: 'Emp-No', width: 100 },
+
+    {
+        field: "emp_name",
+        headerName: "E-Name",
+        width: 220,
+        renderCell: (params) => {
+
+            // const imageUrl = URL.createObjectURL(new Blob([new Uint8Array(params.row.image.data)]));
+
+            // {console.log(params.row.image)}
+            return (
+
+               
+                <div className="cellWithImg">
+                    {/* <img className="cellImg" src={imageUrl} alt={params.row.name} 
+                    
+                    /> */}
+                    {params.row.emp_name}
+
+                </div>
+            )
+        }
+    },
+    { field: 'gender', headerName: 'Gender', width: 120 },
+    { field: 'nic', headerName: 'NIC', width: 160 },
+    { field: 'program', headerName: 'Program', width: 100 },
+    { field: 'emp_type', headerName: 'Emp-Type', width: 130 },
+    { field: 'designation', headerName: 'Designation', width: 180 },
+    // { field: 'faculty_code', headerName: 'Faculty-Code', width: 150 },
+    
+//     { field: 'credit_hr_pr', headerName: 'Cr hr (TH)', width: 130,
+
+//     renderCell: (params) => {
+//         return (
+//            <div>
+//             {params.row.userType}
+//            </div>
+//         )
+//     }
+// },
+//     {
+//         field: 'status', headerName: 'Status', width: 160,
+//         renderCell: (params) => {
+//             return (
+//                 <div className={`cellWithStatus ${params.row.status}`}>
+//                     {
+//                         params.row.status
+//                     }
+//                 </div>
+//             )
+//         }
+//     },
+]
 
 // export const userData = [
 //     {
