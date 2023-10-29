@@ -13,6 +13,7 @@ import "./Style/Dark.scss";
 import { DarkModeContext } from "./Context/darkModeContext";
 import ViewForUsers from "./Pages/ViewForUsers/ViewForUsers";
 import ListCourses from "./Pages/ListCourses/ListCourses";
+import ListStudents from "./Pages/ListStudents/ListStudents";
 
 const App = () => {
   const { darkMode } = useContext(DarkModeContext);
@@ -39,7 +40,7 @@ const App = () => {
               <Route path=":courseId" element={<Single />} />
             </Route>
             <Route path="students">
-              <Route index element={<List />} />
+              <Route index element={<ListStudents />} />
               <Route path="new" element={<New />} />
               <Route path=":studentsId" element={<Single />} />
             </Route>
