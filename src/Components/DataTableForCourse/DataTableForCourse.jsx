@@ -58,11 +58,11 @@ useEffect(()=>{
         //  jab ye nahi lagaya to deletion perform nai hoi thi
         return (
           <div className="cellAction">
-            {/* <Link to={`${data.id}`} style={{ textDecoration: "none" }}>
+            <Link to={`${data.id}`} style={{ textDecoration: "none" }}>
               <button className="viewButton">View</button>
-            </Link> */}
+            </Link>
            
-              <button className="viewButton">View</button>
+              {/* <button className="viewButton">View</button> */}
          
             {/* <button className="deleteButton" onClick={() => handleDelete(data.id)}>Delete</button> */}
             <button className="deleteButton">Delete</button>
