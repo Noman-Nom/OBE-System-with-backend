@@ -49,12 +49,12 @@ export const userColums = [
     },
 ]
 export const userColumsForCourse = [
-    { field: 'id', headerName: 'C-Code', width: 80 },
+    { field: 'id', headerName: 'C-Code', width: 130 },
 
     {
         field: "course_title",
         headerName: "Course Title",
-        width: 290,
+        width: 330,
         renderCell: (params) => {
 
             // const imageUrl = URL.createObjectURL(new Blob([new Uint8Array(params.row.image.data)]));
@@ -73,12 +73,12 @@ export const userColumsForCourse = [
             )
         }
     },
-    { field: 'credit_hr_th', headerName: 'Cr hr (TH) ', width: 90 },
-    { field: 'credit_hr_pr', headerName: 'Cr hr (PR) ', width: 90 },
-    { field: 'program', headerName: 'Program', width: 90 },
-    { field: 'major', headerName: 'Major', width: 90 },
-    { field: 'semester', headerName: 'Semester', width: 90 },
-    { field: 'session', headerName: 'Session', width: 80 },
+    { field: 'credit_hr_th', headerName: 'Cr hr (TH) ', width: 130 },
+    { field: 'credit_hr_pr', headerName: 'Cr hr (PR) ', width: 130 },
+    // { field: 'program', headerName: 'Program', width: 90 },
+    // { field: 'major', headerName: 'Major', width: 90 },
+    // { field: 'semester', headerName: 'Semester', width: 90 },
+    // { field: 'session', headerName: 'Session', width: 80 },
 //     { field: 'credit_hr_pr', headerName: 'Cr hr (TH)', width: 130,
 
 //     renderCell: (params) => {

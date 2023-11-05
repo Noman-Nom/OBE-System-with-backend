@@ -16,6 +16,7 @@ import ListCourses from "./Pages/ListCourses/ListCourses";
 import ListStudents from "./Pages/ListStudents/ListStudents";
 import ListFaculty from "./Pages/ListFaculty/ListFaculty";
 import ViewForCourse from "./Pages/ViewForCourse/ViewForCourse";
+import ViewForStudents from "./Pages/ViewForStudents/ViewForStudents";
 
 const App = () => {
   const { darkMode } = useContext(DarkModeContext);
@@ -44,7 +45,7 @@ const App = () => {
             <Route path="students">
               <Route index element={<ListStudents />} />
               <Route path="new" element={<New />} />
-              <Route path=":studentsId" element={<Single />} />
+              <Route path=":studentsId" element={<ViewForStudents />} />
             </Route>
             <Route path="faculty">
               <Route index element={<ListFaculty />} />
